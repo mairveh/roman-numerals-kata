@@ -1,5 +1,5 @@
 //Arrange
-const romanToStd = require("../src/roman2std_nums");
+const romanToStd = require("../src/roman_to_std_nums");
 
 describe("test converting from roman to standard numerals", () => {
   it("check invalid conversion for A->undefined", () => {
