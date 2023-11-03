@@ -1,12 +1,12 @@
 //Arrange
-const roman2std = require("../src/roman2std_nums");
+const romanToStd = require("../src/roman2std_nums");
 
 describe("test converting from roman to standard numerals", () => {
   it("check invalid conversion for A->undefined", () => {
     const input = "A";
     const expectedResult = undefined;
     //Act
-    const result = roman2std(input);
+    const result = romanToStd(input);
     //Assert
     expect(result).toBe(expectedResult);
   });
@@ -15,7 +15,7 @@ describe("test converting from roman to standard numerals", () => {
     const input = "MMMM";
     const expectedResult = undefined;
     //Act
-    const result = roman2std(input);
+    const result = romanToStd(input);
     //Assert
     expect(result).toBe(expectedResult);
   });
@@ -24,7 +24,7 @@ describe("test converting from roman to standard numerals", () => {
     const input = "I";
     const expectedResult = 1;
     //Act
-    const result = roman2std(input);
+    const result = romanToStd(input);
     //Assert
     expect(result).toBe(expectedResult);
   });
@@ -33,7 +33,7 @@ describe("test converting from roman to standard numerals", () => {
     const input = "V";
     const expectedResult = 5;
     //Act
-    const result = roman2std(input);
+    const result = romanToStd(input);
     //Assert
     expect(result).toBe(expectedResult);
   });
@@ -42,7 +42,7 @@ describe("test converting from roman to standard numerals", () => {
     const input = "X";
     const expectedResult = 10;
     //Act
-    const result = roman2std(input);
+    const result = romanToStd(input);
     //Assert
     expect(result).toBe(expectedResult);
   });
@@ -51,7 +51,7 @@ describe("test converting from roman to standard numerals", () => {
     const input = "L";
     const expectedResult = 50;
     //Act
-    const result = roman2std(input);
+    const result = romanToStd(input);
     //Assert
     expect(result).toBe(expectedResult);
   });
@@ -60,7 +60,7 @@ describe("test converting from roman to standard numerals", () => {
     const input = "C";
     const expectedResult = 100;
     //Act
-    const result = roman2std(input);
+    const result = romanToStd(input);
     //Assert
     expect(result).toBe(expectedResult);
   });
@@ -69,7 +69,7 @@ describe("test converting from roman to standard numerals", () => {
     const input = "D";
     const expectedResult = 500;
     //Act
-    const result = roman2std(input);
+    const result = romanToStd(input);
     //Assert
     expect(result).toBe(expectedResult);
   });
@@ -78,8 +78,59 @@ describe("test converting from roman to standard numerals", () => {
     const input = "M";
     const expectedResult = 1000;
     //Act
-    const result = roman2std(input);
+    const result = romanToStd(input);
     //Assert
     expect(result).toBe(expectedResult);
   });
+
+  //Arrange
+  it("check MMDCCXCIV->2794 conversion", () => {
+    const input = "MMDCCXCIV";
+    const expectedResult = 2794;
+    //Act
+    const result = romanToStd(input);
+    //Assert
+    expect(result).toBe(expectedResult);
+  });
+
+  //Arrange
+  it("check MCCCXXVII->1327 conversion", () => {
+    const input = "MCCCXXVII";
+    const expectedResult = 1327;
+    //Act
+    const result = romanToStd(input);
+    //Assert
+    expect(result).toBe(expectedResult);
+  });
+
+  //Arrange
+  it("check MMDLXVI->2566 conversion", () => {
+    const input = "MMDLXVI";
+    const expectedResult = 2566;
+    //Act
+    const result = romanToStd(input);
+    //Assert
+    expect(result).toBe(expectedResult);
+  });
+
+  //Arrange
+  it("check MMM->3000 conversion", () => {
+    const input = "MMM";
+    const expectedResult = 3000;
+    //Act
+    const result = romanToStd(input);
+    //Assert
+    expect(result).toBe(expectedResult);
+  });
+
+  //Arrange
+  it("check MMDCCCXXIII->2823 conversion", () => {
+    const input = "MMDCCCXXIII";
+    const expectedResult = 2823;
+    //Act
+    const result = romanToStd(input);
+    //Assert
+    expect(result).toBe(expectedResult);
+  });
+    
 });
