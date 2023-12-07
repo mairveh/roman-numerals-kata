@@ -2,9 +2,9 @@
 const stdToRoman = require("../src/std_to_roman_nums");
 
 describe("test converting from standard to roman numerals", () => {
-  it("check invalid conversion for 0->undefined", () => {
+  it("check invalid conversion for 0->invalid number message string", () => {
     const input = "0";
-    const expectedResult = undefined;
+    const expectedResult = "invalid number";
     //Act
     const result = stdToRoman(input);
     //Assert
@@ -12,9 +12,9 @@ describe("test converting from standard to roman numerals", () => {
   });
 
   //Arrange
-  it("check invalid conversion for numbers outside of the valid range 1...3000, 3001->undefined", () => {
+  it("check invalid conversion for numbers outside of the valid range 1...3000, 3001->invalid number message string", () => {
     const input = "3001";
-    const expectedResult = undefined;
+    const expectedResult = "invalid number";
     //Act
     const result = stdToRoman(input);
     //Assert

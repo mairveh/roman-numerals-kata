@@ -1,7 +1,7 @@
 import { ROMAN_NUMS, STANDARD_NUMS } from "./number_types";
 
-function convertStdToRoman(num: number): string | undefined {
-  if (!num || num < 1 || num > 3000) return undefined;
+function convertStdToRoman(num: number): string {
+  if (!num || num < 1 || num > 3000) return "invalid number";
 
   let romanResult = "";
   for (let i = 0; i < STANDARD_NUMS.length; i++) {
